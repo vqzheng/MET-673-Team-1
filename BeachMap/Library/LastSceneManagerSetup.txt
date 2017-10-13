@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/BeachScene.unity
+  isLoaded: 1
+  isActive: 1
