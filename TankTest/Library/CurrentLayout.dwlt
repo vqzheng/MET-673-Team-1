@@ -370,13 +370,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.174258, y: 0.7514519, z: -0.21918611, w: -0.59742147}
+    m_Target: {x: -0.15363276, y: 0.79500705, z: -0.22543459, w: -0.541794}
     speed: 2
-    m_Value: {x: -0.17425793, y: 0.7514516, z: -0.21918604, w: -0.5974212}
+    m_Value: {x: -0.1536327, y: 0.79500675, z: -0.22543451, w: -0.5417938}
   m_Size:
-    m_Target: 319.95438
+    m_Target: 725.35736
     speed: 2
-    m_Value: 319.95438
+    m_Value: 725.35736
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -414,10 +414,10 @@ MonoBehaviour:
     width: 272
     height: 357
   m_TreeViewState:
-    scrollPos: {x: 0, y: 48}
-    m_SelectedIDs: 08faffff
-    m_LastClickedID: -1528
-    m_ExpandedIDs: 08faffff1cfcffff00000000
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: 02faffff1cfcffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -435,8 +435,7 @@ MonoBehaviour:
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 8}
     m_SearchString: 
-  m_ExpandedScenes:
-  - beachScene
+  m_ExpandedScenes: []
   m_CurrenRootInstanceID: 0
   m_Locked: 0
   m_CurrentSortingName: TransformSorting
@@ -488,9 +487,9 @@ MonoBehaviour:
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 62420000
-    m_LastClickedID: 16994
-    m_ExpandedIDs: 000000005c260000103400006242000000ca9a3bffffff7f
+    m_SelectedIDs: fa2b0000
+    m_LastClickedID: 11258
+    m_ExpandedIDs: 000000005c260000fa2b00002034000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -518,7 +517,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000005c260000
+    m_ExpandedIDs: 000000005c260000fa2b000020340000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
