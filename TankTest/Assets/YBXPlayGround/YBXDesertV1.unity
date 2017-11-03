@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.73410547, g: 0.68550956, b: 0.6916613, a: 1}
+  m_IndirectSpecularColor: {r: 0.7341057, g: 0.68551, b: 0.6916622, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -2238,7 +2238,7 @@ Prefab:
     - target: {fileID: 65532470420952160, guid: 6f0cfe4493a224aef8d4d7d7fa4c58c2,
         type: 2}
       propertyPath: m_Size.z
-      value: 5.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 65532470420952160, guid: 6f0cfe4493a224aef8d4d7d7fa4c58c2,
         type: 2}
@@ -2254,6 +2254,25 @@ Prefab:
         type: 2}
       propertyPath: m_CollisionDetection
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114666016782505466, guid: 6f0cfe4493a224aef8d4d7d7fa4c58c2,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114293441929330978, guid: 6f0cfe4493a224aef8d4d7d7fa4c58c2,
+        type: 2}
+      propertyPath: m_Speed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114293441929330978, guid: 6f0cfe4493a224aef8d4d7d7fa4c58c2,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4587837189466734, guid: 6f0cfe4493a224aef8d4d7d7fa4c58c2, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 65235042837612980, guid: 6f0cfe4493a224aef8d4d7d7fa4c58c2, type: 2}
