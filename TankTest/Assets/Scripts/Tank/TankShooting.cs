@@ -12,8 +12,8 @@ namespace Complete
         public AudioSource m_ShootingAudio;         // Reference to the audio source used to play the shooting audio. NB: different to the movement audio source.
         public AudioClip m_ChargingClip;            // Audio that plays when each shot is charging up.
         public AudioClip m_FireClip;                // Audio that plays when each shot is fired.
-        public float m_MinLaunchForce = 15f;        // The force given to the shell if the fire button is not held.
-        public float m_MaxLaunchForce = 30f;        // The force given to the shell if the fire button is held for the max charge time.
+        public float m_MinLaunchForce = 15;        // The force given to the shell if the fire button is not held.
+        public float m_MaxLaunchForce = 30;        // The force given to the shell if the fire button is held for the max charge time.
         public float m_MaxChargeTime = 0.75f;       // How long the shell can charge for before it is fired at max force.
 
 
@@ -91,7 +91,7 @@ namespace Complete
                 Instantiate (m_Shell, m_FireTransform.position, m_FireTransform.rotation) as Rigidbody;
 
             // Set the shell's velocity to the launch force in the fire position's forward direction.
-            shellInstance.velocity = m_CurrentLaunchForce * m_FireTransform.forward; 
+            shellInstance.velocity = 2.5f*m_CurrentLaunchForce * m_FireTransform.forward; 
 
             // Change the clip to the firing clip and play it.
             //m_ShootingAudio.clip = m_FireClip;
