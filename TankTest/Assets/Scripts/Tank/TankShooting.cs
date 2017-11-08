@@ -61,8 +61,8 @@ namespace Complete
                 m_CurrentLaunchForce = m_MinLaunchForce;
 
                 // Change the clip to the charging clip and start it playing.
-                m_ShootingAudio.clip = m_ChargingClip;
-                m_ShootingAudio.Play ();
+                // m_ShootingAudio.clip = m_ChargingClip;
+                // m_ShootingAudio.Play ();
             }
             // Otherwise, if the fire button is being held and the shell hasn't been launched yet...
             else if (Input.GetButton (m_FireButton) && !m_Fired)
@@ -94,8 +94,8 @@ namespace Complete
             shellInstance.velocity = 2.5f*m_CurrentLaunchForce * m_FireTransform.forward; 
 
             // Change the clip to the firing clip and play it.
-            m_ShootingAudio.clip = m_FireClip;
-            m_ShootingAudio.Play ();
+            // m_ShootingAudio.clip = m_FireClip;
+            // m_ShootingAudio.Play ();
 
             // Reset the launch force.  This is a precaution in case of missing button events.
             m_CurrentLaunchForce = m_MinLaunchForce;
