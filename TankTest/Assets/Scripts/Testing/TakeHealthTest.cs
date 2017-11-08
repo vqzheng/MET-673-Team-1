@@ -11,7 +11,8 @@ public class TankHealthTest
 	public Color m_FullHealthColor = Color.green;  
 	public Color m_ZeroHealthColor = Color.red;
 
-	public void init() {
+	public void Init() 
+	{
 		m_CurrentHealth = m_StartingHealth;
 		m_Dead = false;
 		m_HealthColor = m_FullHealthColor;
@@ -35,8 +36,9 @@ public class TankHealthTest
 	}
 
 	[Test]
-	public void TakeDamageTest() {
-		init ();
+	public void TakeDamageTest() 
+	{
+		Init ();
 		TakeDamage (5);
 		Assert.AreEqual (95f, m_CurrentHealth);
 		TakeDamage (200);
@@ -44,8 +46,9 @@ public class TankHealthTest
 	}
 
 	[Test]
-	public void DeathTest() {
-		init ();
+	public void DeathTest() 
+	{
+		Init ();
 		TakeDamage (5);
 		Assert.IsFalse (m_Dead);
 		TakeDamage (200);

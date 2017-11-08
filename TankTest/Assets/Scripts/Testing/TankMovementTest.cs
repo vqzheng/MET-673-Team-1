@@ -24,7 +24,8 @@ public class TankMovementTest
 
 	}
 
-	public void init() {
+	public void Init() 
+	{
 		position = new Vector3 (0, 0, 0);
 		quaternion = eularQuaternion (0f, 0f, 0f);
 	}
@@ -58,7 +59,8 @@ public class TankMovementTest
 		return q;
 	}
 
-	private bool isEqualVector3(Vector3 v1, Vector3 v2) {
+	private bool isEqualVector3(Vector3 v1, Vector3 v2) 
+	{
 		if (Mathf.Abs((float)v1.x - (float)v2.x) < 0.001 
 			&& Mathf.Abs((float)v1.y - (float)v2.y) < 0.001
 			&& Mathf.Abs((float)v1.z - (float)v2.z) < 0.001)
@@ -66,7 +68,8 @@ public class TankMovementTest
 		return false;
 	}
 
-	private bool isEqualQuaternion(Quaternion q1, Quaternion q2) {
+	private bool isEqualQuaternion(Quaternion q1, Quaternion q2) 
+	{
 		if (Mathf.Abs(q1.w - q2.w) < 0.01
 			&& Mathf.Abs(q1.x - q2.x) < 0.01
 			&& Mathf.Abs(q1.y - q2.y) < 0.01
@@ -77,43 +80,48 @@ public class TankMovementTest
 
 
 	[Test]
-	public void MoveForwardTest() {
+	public void MoveForwardTest() 
+	{
 		// if can forward correctly
-		init ();
+		Init ();
 		Move (1, 1.2f);
 		Assert.IsTrue(isEqualVector3(position, new Vector3(0,0,(float)14.4)));
 	}
 
 	[Test]
-	public void MoveBackwardTest() {
+	public void MoveBackwardTest() 
+	{
 		// if can backward correctly
-		init();
+		Init();
 		Move (-1, 1.2f);
 		Assert.IsTrue(isEqualVector3(position, new Vector3(0,0,(float)-14.4)));
 	}
 
 	[Test]
-	public void TurnLeftTest() {
+	public void TurnLeftTest() 
+	{
 		// if can turn left correctly
-		init ();
+		Init ();
 		Turn (1, 5);
 		Quaternion res = new Quaternion (0.176f, 0.0f, 0.0f, -0.98f);
 		Assert.IsTrue(isEqualQuaternion(quaternion, res));
 	}
 
 	[Test]
-	public void TurnRightTest() {
+	public void TurnRightTest() 
+	{
 		// if can turn left correctly
-		init ();
+		Init ();
 		Turn (-1, 5);
 		Quaternion res = new Quaternion (-0.176f, 0.0f, 0.0f, -0.98f);
 		Assert.IsTrue(isEqualQuaternion(quaternion, res));
 	}
 
 	[Test]
-	public void CombineMovementTest() {
+	public void CombineMovementTest() 
+	{
 		// combine forward, backward, and turn together
-		init();
+		Init();
 		Move (1, 1);
 		Move (-1, 1);
 		Turn (1, 1);

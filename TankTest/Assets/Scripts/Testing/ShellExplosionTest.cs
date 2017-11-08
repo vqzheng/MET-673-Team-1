@@ -9,11 +9,13 @@ public float m_MaxDamage = 100f;                    // The amount of damage done
 	public float m_ExplosionRadius = 5f;                // The maximum distance away from the explosion tanks can be and are still affected.
 	public Vector3 position;						// the position of tank
 
-	private void init() {
+	private void Init() 
+	{
 		position = new Vector3 (0, 0, 0);
 	}
 
-	private float CalculateDistance(Vector3 v1, Vector3 v2) {
+	private float CalculateDistance(Vector3 v1, Vector3 v2) 
+	{
 		return Mathf.Sqrt ((v1.x - v2.x) * (v1.x - v2.x)
 			+ (v1.y - v2.y) * (v1.y - v2.y)
 			+ (v1.z - v2.z) * (v1.z - v2.z));
@@ -37,7 +39,8 @@ public float m_MaxDamage = 100f;                    // The amount of damage done
 	}
 
 	[Test]
-	public void CalculateDistanceTest() {
+	public void CalculateDistanceTest() 
+	{
 		Vector3 v1 = new Vector3 (0, 0, 0);
 		Vector3 v2 = new Vector3 (1, 1, 1);
 		Vector3 v3 = new Vector3 (0, 0, 1);
@@ -46,8 +49,9 @@ public float m_MaxDamage = 100f;                    // The amount of damage done
 	}
 
 	[Test]
-	public void CalculateDamageTest() {
-		init ();
+	public void CalculateDamageTest() 
+	{
+		Init ();
 		Vector3 v1 = new Vector3 (2, 2, 2);
 		Vector3 v2 = new Vector3 (1, 1, 1);
 		Vector3 v3 = new Vector3 (5, 5, 5);
