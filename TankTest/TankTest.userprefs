@@ -1,20 +1,12 @@
 ﻿<Properties StartupConfiguration="{1198B96C-BD09-76D8-D9A8-3668C6D95EC4}|" StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.ItemProperties.TankTest PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Testing/TakeHealthTest.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Tank/TankShooting.cs">
     <Files>
-      <File FileName="Assets/Scripts/Testing/TakeHealthTest.cs" Line="39" Column="11" />
+      <File FileName="Assets/Scripts/Manager/TankManager.cs" Line="46" Column="12" />
+      <File FileName="Assets/Scripts/Manager/GameManage.cs" Line="231" Column="55" />
+      <File FileName="Assets/Scripts/Tank/TankShooting.cs" Line="37" Column="49" />
+      <File FileName="Assets/Scripts/Tank/TankMovement.cs" Line="1" Column="1" />
     </Files>
-    <Pads>
-      <Pad Id="MonoDevelop.NUnit.TestPad">
-        <State name="__root__">
-          <Node name="TankTest" expanded="True">
-            <Node name="Assembly-CSharp" expanded="True" selected="True">
-              <Node name="TankMovementTest" expanded="True" />
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

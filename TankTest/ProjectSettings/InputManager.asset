@@ -58,7 +58,7 @@ InputManager:
     descriptiveName: Fire keyboard button for Player 2
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: l
+    positiveButton: enter
     altNegativeButton: 
     altPositiveButton: l
     gravity: 1000
@@ -160,7 +160,7 @@ InputManager:
     gravity: 3
     dead: 0.001
     sensitivity: 1
-    snap: 0
+    snap: 1
     invert: 0
     type: 0
     axis: 0
@@ -176,8 +176,8 @@ InputManager:
     gravity: 3
     dead: 0.001
     sensitivity: 1
-    snap: 0
-    invert: 1
+    snap: 1
+    invert: 0
     type: 0
     axis: 1
     joyNum: 0

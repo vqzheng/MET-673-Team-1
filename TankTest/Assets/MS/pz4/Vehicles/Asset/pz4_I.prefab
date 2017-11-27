@@ -980,7 +980,6 @@ GameObject:
   - component: {fileID: 114413473938914954}
   - component: {fileID: 114255733455083356}
   - component: {fileID: 54924688404418598}
-  - component: {fileID: 114674372074477770}
   - component: {fileID: 114776981082856100}
   m_Layer: 8
   m_Name: pz4_I
@@ -4842,7 +4841,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlayerNumber: 1
-  m_Speed: 15
+  m_Speed: 25
   m_TurnSpeed: 60
   m_MovementAudio: {fileID: 0}
   m_EngineIdling: {fileID: 0}
@@ -4923,24 +4922,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &114674372074477770
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 168606}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38d23621eaf0f470d8cb74ffd3d4ea4a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_PlayerNumber: 1
-  m_Speed: 25
-  m_TurnSpeed: 120
-  m_MovementAudio: {fileID: 0}
-  m_EngineIdling: {fileID: 0}
-  m_EngineDriving: {fileID: 0}
-  m_PitchRange: 0.2
 --- !u!114 &114721799395005558
 MonoBehaviour:
   m_ObjectHideFlags: 1
