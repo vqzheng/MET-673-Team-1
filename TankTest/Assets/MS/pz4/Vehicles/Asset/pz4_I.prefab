@@ -980,7 +980,6 @@ GameObject:
   - component: {fileID: 114413473938914954}
   - component: {fileID: 114255733455083356}
   - component: {fileID: 54924688404418598}
-  - component: {fileID: 65539029107545620}
   - component: {fileID: 114674372074477770}
   - component: {fileID: 114776981082856100}
   m_Layer: 8
@@ -1411,8 +1410,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 168606}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 380.8705, y: 5, z: 258.7862}
-  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_LocalPosition: {x: 380.8705, y: 0.01, z: 258.7862}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 460646}
   - {fileID: 439158}
@@ -4710,8 +4709,8 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
-  m_CollisionDetection: 0
+  m_Constraints: 84
+  m_CollisionDetection: 2
 --- !u!65 &65178186960137768
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -4722,20 +4721,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3, y: 2.3, z: 4.5}
-  m_Center: {x: 0, y: 1.1, z: 0}
---- !u!65 &65539029107545620
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 168606}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 3, y: 2.3, z: 4.5}
-  m_Center: {x: 0, y: 1.1, z: 0}
+  m_Size: {x: 3, y: 3.5, z: 4}
+  m_Center: {x: 0, y: 1.75, z: 0.3}
 --- !u!114 &114255733455083356
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4750,12 +4737,11 @@ MonoBehaviour:
   m_PlayerNumber: 1
   m_Shell: {fileID: 54766429569107276, guid: 284e8fc85aeb041eeb39e5eb5227bddf, type: 2}
   m_FireTransform: {fileID: 4797319714606600}
-  m_AimSlider: {fileID: 114503040112942558}
   m_ShootingAudio: {fileID: 0}
   m_ChargingClip: {fileID: 0}
   m_FireClip: {fileID: 0}
-  m_MinLaunchForce: 15
-  m_MaxLaunchForce: 30
+  m_MinLaunchForce: 20
+  m_MaxLaunchForce: 40
   m_MaxChargeTime: 0.75
 --- !u!114 &114295888534664444
 MonoBehaviour:
@@ -4856,8 +4842,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlayerNumber: 1
-  m_Speed: 25
-  m_TurnSpeed: 120
+  m_Speed: 15
+  m_TurnSpeed: 60
   m_MovementAudio: {fileID: 0}
   m_EngineIdling: {fileID: 0}
   m_EngineDriving: {fileID: 0}

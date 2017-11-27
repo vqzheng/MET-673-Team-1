@@ -4761,9 +4761,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlayerNumber: 1
-  m_Shell: {fileID: 54633543858944376, guid: 9431f7f28d54d48c19aca2f027e16cf7, type: 2}
+  m_Shell: {fileID: 54766429569107276, guid: 284e8fc85aeb041eeb39e5eb5227bddf, type: 2}
   m_FireTransform: {fileID: 4587837189466734}
-  m_AimSlider: {fileID: 0}
   m_ShootingAudio: {fileID: 82417439240222526}
   m_ChargingClip: {fileID: 0}
   m_FireClip: {fileID: 0}
