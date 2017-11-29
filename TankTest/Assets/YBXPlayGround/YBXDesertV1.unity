@@ -2136,7 +2136,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1425542971}
   m_Layer: 0
-  m_Name: SpawnPoint2
+  m_Name: SpawnPoint1
   m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -2148,13 +2148,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1425542970}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 70, y: 0.01, z: 168.09499}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1467640692 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4394755334458772, guid: 0c4d599707914dd4aa71b36b72140226,
@@ -2434,17 +2434,19 @@ MonoBehaviour:
   m_TankPrefab: {fileID: 168606, guid: fe3ea795c3c6b414d9596a63441716cd, type: 2}
   m_Tanks:
   - m_PlayerColor: {r: 0.9558824, g: 0.014057107, b: 0.014057107, a: 0}
-    m_SpawnPoint: {fileID: 1797346755}
-    m_PlayerNumber: 0
-    m_ColoredPlayerText: 
-    m_Instance: {fileID: 0}
-    m_Wins: 0
-  - m_PlayerColor: {r: 0.08839748, g: 0.18183456, b: 0.8014706, a: 0}
     m_SpawnPoint: {fileID: 1425542971}
     m_PlayerNumber: 0
     m_ColoredPlayerText: 
     m_Instance: {fileID: 0}
     m_Wins: 0
+    health: 0
+  - m_PlayerColor: {r: 0.08839748, g: 0.18183456, b: 0.8014706, a: 0}
+    m_SpawnPoint: {fileID: 1797346755}
+    m_PlayerNumber: 0
+    m_ColoredPlayerText: 
+    m_Instance: {fileID: 0}
+    m_Wins: 0
+    health: 0
 --- !u!4 &1734648740
 Transform:
   m_ObjectHideFlags: 0
@@ -2598,7 +2600,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1797346755}
   m_Layer: 0
-  m_Name: SpawnPoint1
+  m_Name: SpawnPoint2
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
