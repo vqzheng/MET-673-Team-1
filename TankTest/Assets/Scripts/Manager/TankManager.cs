@@ -1,7 +1,5 @@
 ﻿using System;
 using UnityEngine;
-using Complete;
-
 
 [Serializable]
 public class TankManager
@@ -21,10 +19,12 @@ public class TankManager
 	public GameObject m_Instance;         // A reference to the instance of the tank when it is created.
 	[HideInInspector]
 	public int m_Wins;                    // The number of wins this player has so far.
+	public int health;
 
 
 	private TankMovement m_Movement;                        // Reference to tank's movement script, used to disable and enable control.
 	private TankShooting m_Shooting;                        // Reference to tank's shooting script, used to disable and enable control.
+	private TankHealth m_Health;
 	private GameObject m_CanvasGameObject;                  // Used to disable the world space UI during the Starting and Ending phases of each round.
 
 
@@ -33,6 +33,7 @@ public class TankManager
 		// Get references to the components.
 		m_Movement = m_Instance.GetComponent<TankMovement>();
 		m_Shooting = m_Instance.GetComponent<TankShooting>();
+		m_Health = m_Instance.GetComponent<TankHealth> ();
 		m_CanvasGameObject = m_Instance.GetComponentInChildren<Canvas>().gameObject;
 
 		// Set the player numbers to be consistent across the scripts.
@@ -82,5 +83,10 @@ public class TankManager
 
 		m_Instance.SetActive(false);
 		m_Instance.SetActive(true);
+	}
+
+	public float getHelath()
+	{
+		return m_Health.m_CurrentHealth;
 	}
 }

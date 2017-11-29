@@ -104,7 +104,7 @@ public class GameManage : MonoBehaviour
 
 		// Increment the round number and display text showing the players what round it is.
 		m_RoundNumber++;
-		m_MessageText.text = "ROUND " + m_RoundNumber;
+		m_MessageText.text = "ROUND " + m_RoundNumber + m_Tanks[0].getHelath();
 
 		// Wait for the specified length of time until yielding control back to the game loop.
 		yield return m_StartWait;
@@ -117,12 +117,13 @@ public class GameManage : MonoBehaviour
 		EnableTankControl();
 
 		// Clear the text from the screen.
-		m_MessageText.text = string.Empty;
+
 
 		// While there is not one tank left...
 		while (!OneTankLeft())
 		{
 			// ... return on the next frame.
+			m_MessageText.text = m_Tanks[0].getHelath() + " " + m_Tanks[1].getHelath();
 			yield return null;
 		}
 	}
@@ -215,7 +216,7 @@ public class GameManage : MonoBehaviour
 
 		// If there is a winner then change the message to reflect that.
 		if (m_RoundWinner != null)
-			message = m_RoundWinner.m_ColoredPlayerText + " WINS THE ROUND!";
+			message = m_RoundWinner.m_ColoredPlayerText + " WINS THE ROUND!" + m_Tanks[0].getHelath();
 
 		// Add some line breaks after the initial message.
 		message += "\n\n\n\n";
