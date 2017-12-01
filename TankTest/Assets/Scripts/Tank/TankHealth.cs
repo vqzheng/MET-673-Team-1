@@ -5,9 +5,10 @@ public class TankHealth : MonoBehaviour
 {
     public float m_StartingHealth = 100f;          
     public Slider m_Slider;                        
-    public Image m_FillImage;                      
-    public Color m_FullHealthColor = Color.green;  
-    public Color m_ZeroHealthColor = Color.red;    
+    public Image m_FillImage;
+	public int m_PlayerNumber = 1;         
+//    public Color m_FullHealthColor = Color.green;  
+//    public Color m_ZeroHealthColor = Color.red;    
     public GameObject m_ExplosionPrefab;
     
     private AudioSource m_ExplosionAudio;          
@@ -31,6 +32,7 @@ public class TankHealth : MonoBehaviour
         m_Dead = false;
 
         SetHealthUI();
+		SetColor ();
     }
 
     public void TakeDamage(float amount)
@@ -45,13 +47,20 @@ public class TankHealth : MonoBehaviour
         }
     }
 
-
+	private void SetColor ()
+	{
+		if (m_PlayerNumber == 1) {
+			m_FillImage.color = Color.blue;
+		} else {
+			m_FillImage.color = Color.red;
+		}
+	}
     private void SetHealthUI()
     {
         // Adjust the value and colour of the slider.
         m_Slider.value = m_CurrentHealth;
 
-        m_FillImage.color = Color.Lerp(m_ZeroHealthColor, m_FullHealthColor, m_CurrentHealth / m_StartingHealth);
+        //m_FillImage.color = Color.Lerp(m_ZeroHealthColor, m_FullHealthColor, m_CurrentHealth / m_StartingHealth);
     }
 
 
