@@ -12,7 +12,8 @@ public class GameManage : MonoBehaviour
 	public Text m_MessageText;                  // Reference to the overlay Text to display winning text, etc.
 	public GameObject m_TankPrefab;             // Reference to the prefab the players will control.
 	public TankManager[] m_Tanks;               // A collection of managers for enabling and disabling different aspects of the tanks.
-
+	public Slider m_SliderLeft;
+	public Slider m_SliderRight;
 
 	private int m_RoundNumber;                  // Which round the game is currently on.
 	private WaitForSeconds m_StartWait;         // Used to have a delay whilst the round starts.
@@ -26,6 +27,8 @@ public class GameManage : MonoBehaviour
 		// Create the delays so they only have to be made once.
 		m_StartWait = new WaitForSeconds(m_StartDelay);
 		m_EndWait = new WaitForSeconds(m_EndDelay);
+		m_SliderLeft.value = 100;
+		m_SliderRight.value = 100;
 
 		SpawnAllTanks();
 		SetCameraTargets();
@@ -124,6 +127,8 @@ public class GameManage : MonoBehaviour
 		{
 			// ... return on the next frame.
 			m_MessageText.text = m_Tanks[0].getHelath() + " " + m_Tanks[1].getHelath();
+			m_SliderLeft.value = m_Tanks[0].getHelath();
+			m_SliderRight.value = m_Tanks[1].getHelath();
 			yield return null;
 		}
 	}
@@ -213,6 +218,8 @@ public class GameManage : MonoBehaviour
 	{
 		// By default when a round ends there are no winners so the default end message is a draw.
 		string message = "DRAW!";
+		m_SliderLeft.value = 0;
+		m_SliderRight.value = 0;
 
 		// If there is a winner then change the message to reflect that.
 		if (m_RoundWinner != null)
