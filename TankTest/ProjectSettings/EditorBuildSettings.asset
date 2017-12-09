@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/TestMenuScenes.unity
+    path: Assets/Scenes/MainMenu.unity
     guid: cfd1c10a73bfb4cdd976d0a6c471466a
   - enabled: 1
     path: Assets/Scenes/YBXDesertV1.unity
@@ -15,5 +15,5 @@ EditorBuildSettings:
     path: Assets/Scenes/BeachScene.unity
     guid: d49838d875cde4c2895c009f2fff7a3b
   - enabled: 0
-    path: Assets/Scenes/MainMenu.unity
+    path: 
     guid: 4eaae09d6272941ab96fb14aa1a78cb7

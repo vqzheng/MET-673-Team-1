@@ -22,11 +22,13 @@ namespace Area730.UpdatesManager
             return DateTime.Now.Ticks / TimeSpan.TicksPerMillisecond;
         }
 
+
         public class PluginDesc
         {
             public string   Id      { get; set; }
             public string   Name    { get; set; }
             public float    Version { get; set; }
+            public string IconUrl   { get; set; }
 
             public override string ToString()
             {
@@ -75,7 +77,9 @@ namespace Area730.UpdatesManager
             Dictionary<string, PluginDesc> serverDescriptors    = ParseDescriptions(serverData);
             List<PluginDesc> localDescriptors                   = GetLocalDescriptors();
 
-            pluginsToUpdate                                     = new List<PluginDesc>();
+            List<PluginDesc> remoteForLocals = new List<PluginDesc>();
+
+            pluginsToUpdate = new List<PluginDesc>();
 
             foreach (var localDesc in localDescriptors)
             {
@@ -83,14 +87,17 @@ namespace Area730.UpdatesManager
                 
                 if (serverDescriptors.TryGetValue(localDesc.Id, out remoteDesc))
                 {
+                    remoteForLocals.Add(remoteDesc);
+                   
                     if (remoteDesc.Version > localDesc.Version)
                     {
                         // localDesc plugin needs update
                         pluginsToUpdate.Add(remoteDesc);
                     }
-                } 
+                }
             }
 
+            CheckRate(remoteForLocals);
 
             UpdatesWindow.ShowWindow();
         }
@@ -127,10 +134,12 @@ namespace Area730.UpdatesManager
                 string id           = node["pluginId"];
                 string version      = node["pluginVersion"];
                 string pluginName   = node["pluginName"];
+                string iconUrl      = node["iconUrl"];
 
                 desc.Id             = id;
                 desc.Name           = pluginName;
                 desc.Version        = float.Parse(version);
+                desc.IconUrl        = iconUrl;
 
                 res.Add(desc.Id, desc);
             }
@@ -181,9 +190,145 @@ namespace Area730.UpdatesManager
 
             return res;
         }
+
+        private static void ShowRateWindowRandom(List<PluginDesc> items)
+        {
+            List<PluginDesc> notRated = new List<PluginDesc>();
+
+            foreach(var item in items)
+            {
+                if (IsAppRated(item.Id) == false)
+                {
+                    notRated.Add(item);
+                }
+            }
+
+            if (notRated.Count > 0)
+            {
+                int index = UnityEngine.Random.Range(0, notRated.Count);
+
+                ShowRateWindowForApp(notRated[index]);
+            }
+        }
+
+        private static WWW rateIconWWW;
+
+        private static void CheckRate(List<PluginDesc> items)
+        {
+            if (IsFirstRun)
+            {
+                IsFirstRun = false;
+            } else
+            {
+                ShowRateWindowRandom(items);
+            }
+        }
+
+        private static void ShowRateWindowForApp(PluginDesc desc)
+        {
+            RateWindow.desc = desc;
+
+            rateIconWWW = new WWW(desc.IconUrl);
+            EditorApplication.update += DownloadAppIcon;
+        }
+
+        private static void DownloadAppIcon()
+        {
+            if (rateIconWWW.isDone)
+            {
+                EditorApplication.update -= DownloadAppIcon;
+
+                if (rateIconWWW.error != null)
+                {
+                    Debug.Log("[Area730] Error downloading rate icon");
+                    return;
+                }
+                else
+                {
+                    RateWindow.tex = rateIconWWW.texture;
+                    RateWindow.ShowWindow();
+                }
+                
+                
+            }
+        }
+
+        private static bool IsAppRated(string appId)
+        {
+            return EditorPrefs.GetBool("area730_is_app_rated_" + appId, false);
+        }
+
+        public static void SetAppRated(string appId)
+        {
+            EditorPrefs.SetBool("area730_is_app_rated_" + appId, true);
+        }
+
+        private static bool IsFirstRun
+        {
+            get
+            {
+                return EditorPrefs.GetBool("area730_um_first_run", true);
+            }
+
+            set
+            {
+                EditorPrefs.SetBool("area730_um_first_run", value);
+            }
+        }
     }
 
+    public class RateWindow : EditorWindow
+    {
+        private static readonly int WindowWidth = 250;
+        private static readonly int WindowHeight = 130;
 
+        private static readonly string WindowTitle = "Rate us please!";
+
+        public static UpdatePlugins.PluginDesc desc;
+        public static Texture2D tex;
+
+        public static void ShowWindow()
+        {
+            if (desc == null || tex == null)
+            {
+                return;
+            }
+
+            RateWindow window = (RateWindow)EditorWindow.GetWindow(typeof(RateWindow), true, WindowTitle, true);
+            window.minSize = new Vector2(WindowWidth, WindowHeight);
+            window.maxSize = new Vector2(WindowWidth, WindowHeight);
+            window.Show();
+        }
+
+        void OnGUI()
+        {
+            GUIStyle guiStyle = new GUIStyle(GUI.skin.button)
+            {
+                richText = true
+            };
+
+            GUIStyle labelStyle = new GUIStyle(GUI.skin.label)
+            {
+                richText = true,
+                alignment = TextAnchor.MiddleCenter
+            };
+
+            GUI.DrawTexture(new Rect(10,  25, 70, 70), tex, ScaleMode.StretchToFill);
+
+            GUI.Label(new Rect(85, 6, 150, 70), "<size=13><b>We improve plugins\n based on your\n reviews!</b></size>", labelStyle);
+
+            if (GUI.Button(new Rect(110, 80, 100, 30), "<size=14><b>Rate</b></size>", guiStyle))
+            {
+                UpdatePlugins.SetAppRated(desc.Id);
+
+                AssetStore.Open("content/" + desc.Id);
+
+                Close();
+            }
+        }
+
+     
+    }
 
     public class UpdatesWindow : EditorWindow
     {
@@ -364,7 +509,6 @@ namespace Area730.UpdatesManager
             {
                 richText = true,
                 alignment = TextAnchor.MiddleCenter  
-                
             };
 
             labelStyle.normal.textColor = guiStyle.normal.textColor;
