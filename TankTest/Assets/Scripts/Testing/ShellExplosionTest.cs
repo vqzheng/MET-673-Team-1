@@ -3,11 +3,12 @@ using NUnit.Framework;
 
 public class ShellExplosionTest
 {
-public float m_MaxDamage = 100f;                    // The amount of damage done if the explosion is centred on a tank.
+	public float m_MaxDamage = 100f;                    // The amount of damage done if the explosion is centred on a tank.
 	public float m_ExplosionForce = 1000f;              // The amount of force added to a tank at the centre of the explosion.
 	public float m_MaxLifeTime = 2f;                    // The time in seconds before the shell is removed.
 	public float m_ExplosionRadius = 5f;                // The maximum distance away from the explosion tanks can be and are still affected.
 	public Vector3 position;						// the position of tank
+	public bool m_Destroy = false;
 
 	private void Init() 
 	{
@@ -35,7 +36,17 @@ public float m_MaxDamage = 100f;                    // The amount of damage done
 		// Make sure that the minimum damage is always 0.
 		damage = Mathf.Max (0f, damage);
 
+		m_Destroy = true;
 		return damage;
+	}
+
+	[Test]
+	public void DestroyTest()
+	{
+		Init ();
+		Vector3 v1 = new Vector3 (2, 2, 2);
+		Assert.AreEqual (30.717968f, CalculateDamage (v1));
+		Assert.IsTrue (m_Destroy);
 	}
 
 	[Test]

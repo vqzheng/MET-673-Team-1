@@ -98,6 +98,16 @@ public class TankMovementTest
 	}
 
 	[Test]
+	public void CombineMoveTest()
+	{
+		Init ();
+		Move (1, 1.0f);
+		Move (-1, 1.0f);
+		Assert.IsTrue(isEqualVector3(position, new Vector3(0, 0, 0)));
+	}
+
+
+	[Test]
 	public void TurnLeftTest() 
 	{
 		// if can turn left correctly
@@ -107,6 +117,7 @@ public class TankMovementTest
 		Assert.IsTrue(isEqualQuaternion(quaternion, res));
 	}
 
+
 	[Test]
 	public void TurnRightTest() 
 	{
@@ -115,6 +126,15 @@ public class TankMovementTest
 		Turn (-1, 5);
 		Quaternion res = new Quaternion (-0.176f, 0.0f, 0.0f, -0.98f);
 		Assert.IsTrue(isEqualQuaternion(quaternion, res));
+	}
+
+	[Test]
+	public void CombineTurnTest()
+	{
+		Init ();
+		Turn (1, 5);
+		Turn (-1, 5);
+		Assert.IsTrue(isEqualQuaternion(quaternion, new Quaternion(0f, 0f, 0f, 1.0f)));
 	}
 
 	[Test]
@@ -128,6 +148,6 @@ public class TankMovementTest
 		Turn (-1, 1);
 		Assert.IsTrue (isEqualVector3 (position, new Vector3 (0f, 0f, 0f)));
 	}
-		
+
 }
 

@@ -21,7 +21,7 @@ public class TankShootingTest
 		m_CurrentLaunchForce = m_MinLaunchForce;
 		m_ChargeSpeed = (m_MaxLaunchForce - m_MinLaunchForce) / m_MaxChargeTime;
 		m_Fired = false;
-		
+
 	}
 
 	public void CalculateForce(float delta_time) 
@@ -39,21 +39,30 @@ public class TankShootingTest
 		}
 
 	}
-		
+
 	[Test]
 	public void CalculateForceTest() {
 		Init ();
 		CalculateForce (0);
 		Assert.AreEqual (m_MinLaunchForce, m_CurrentLaunchForce);
-		Assert.IsFalse (m_Fired);
 		CalculateForce (0.5f);
 		Assert.AreEqual (25, m_CurrentLaunchForce);
-		Assert.IsFalse (m_Fired);
 		CalculateForce (1);
 		Assert.AreEqual (30, m_CurrentLaunchForce);
-		Assert.IsTrue (m_Fired);
 		CalculateForce (0.1f);
 		Assert.AreEqual (m_MinLaunchForce, m_CurrentLaunchForce);
+	}
+
+	[Test]
+	public void FiredTest() {
+		Init ();
+		CalculateForce (0);
+		Assert.IsFalse (m_Fired);
+		CalculateForce (0.5f);
+		Assert.IsFalse (m_Fired);
+		CalculateForce (1);
+		Assert.IsTrue (m_Fired);
+		CalculateForce (0.1f);
 		Assert.IsFalse (m_Fired);
 	}
 }
