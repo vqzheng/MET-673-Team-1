@@ -38,32 +38,32 @@ public class ShellExplosion : MonoBehaviour
 
             // Find the TankHealth script associated with the rigidbody.
             TankHealth targetHealth = targetRigidbody.GetComponent<TankHealth> ();
+			m_ExplosionParticles.transform.parent = null;
+
+
+			// Play the particle system.
+			m_ExplosionParticles.Play();
+
+			// Play the explosion sound effect.
+			// m_ExplosionAudio.Play();
+
+			// Once the particles have finished, destroy the gameobject they are on.
+			ParticleSystem.MainModule mainModule = m_ExplosionParticles.main;
+			Destroy (m_ExplosionParticles.gameObject, mainModule.duration);
 
             // If there is no TankHealth script attached to the gameobject, go on to the next collider.
-            if (!targetHealth)
-                continue;
+			if (targetHealth) {
 
-            // Calculate the amount of damage the target should take based on it's distance from the shell.
-            float damage = CalculateDamage (targetRigidbody.position);
+				// Calculate the amount of damage the target should take based on it's distance from the shell.
+				float damage = CalculateDamage (targetRigidbody.position);
 
-            // Deal this damage to the tank.
-            targetHealth.TakeDamage (damage);
+				// Deal this damage to the tank.
+				targetHealth.TakeDamage (damage);
+			}
         }
 
         // Unparent the particles from the shell.
-        m_ExplosionParticles.transform.parent = null;
-	
-
-        // Play the particle system.
-        m_ExplosionParticles.Play();
-
-        // Play the explosion sound effect.
-        // m_ExplosionAudio.Play();
-
-        // Once the particles have finished, destroy the gameobject they are on.
-        ParticleSystem.MainModule mainModule = m_ExplosionParticles.main;
-        Destroy (m_ExplosionParticles.gameObject, mainModule.duration);
-
+       
         // Destroy the shell.
         Destroy (gameObject);
     }

@@ -1,10 +1,15 @@
 fileFormatVersion: 2
 guid: 2481875b7441d47a2a20349d9ab54018
-timeCreated: 1509920460
+timeCreated: 1513030260
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - m_Shell: {fileID: 54766429569107276, guid: 284e8fc85aeb041eeb39e5eb5227bddf, type: 2}
+  - m_FireTransform: {instanceID: 0}
+  - m_ShootingAudio: {instanceID: 0}
+  - m_ChargingClip: {instanceID: 0}
+  - m_FireClip: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
