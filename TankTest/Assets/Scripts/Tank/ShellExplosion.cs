@@ -52,6 +52,7 @@ public class ShellExplosion : MonoBehaviour
 
         // Unparent the particles from the shell.
         m_ExplosionParticles.transform.parent = null;
+	
 
         // Play the particle system.
         m_ExplosionParticles.Play();
