@@ -2235,7 +2235,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1030813846999884}
   m_LocalRotation: {x: 0.08715596, y: -0, z: -0, w: -0.9961947}
-  m_LocalPosition: {x: 0, y: 1.7, z: 3.64}
+  m_LocalPosition: {x: 0, y: 1.7, z: 6.36}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children: []
   m_Father: {fileID: 4143081146832096}
@@ -4717,9 +4717,9 @@ MonoBehaviour:
   m_StartingHealth: 100
   m_Slider: {fileID: 114293920833424968}
   m_FillImage: {fileID: 114689141840242882}
-  m_FullHealthColor: {r: 0, g: 1, b: 0, a: 1}
-  m_ZeroHealthColor: {r: 1, g: 0, b: 0, a: 1}
+  m_PlayerNumber: 1
   m_ExplosionPrefab: {fileID: 151086, guid: 4e7417cc10ee947129b8204c048d58af, type: 2}
+  m_CurrentHealth: 0
 --- !u!114 &114689141840242882
 MonoBehaviour:
   m_ObjectHideFlags: 1

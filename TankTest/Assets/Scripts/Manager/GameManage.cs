@@ -14,6 +14,8 @@ public class GameManage : MonoBehaviour
 	public TankManager[] m_Tanks;               // A collection of managers for enabling and disabling different aspects of the tanks.
 	public Slider m_SliderLeft;
 	public Slider m_SliderRight;
+	public Text player1_text;
+	public Text player2_text;
 
 	private int m_RoundNumber;                  // Which round the game is currently on.
 	private WaitForSeconds m_StartWait;         // Used to have a delay whilst the round starts.
@@ -29,6 +31,8 @@ public class GameManage : MonoBehaviour
 		m_EndWait = new WaitForSeconds(m_EndDelay);
 		m_SliderLeft.value = 100;
 		m_SliderRight.value = 100;
+		player1_text.text = "Player 1";
+		player2_text.text = "Player 2";
 
 		SpawnAllTanks();
 		SetCameraTargets();
@@ -100,6 +104,8 @@ public class GameManage : MonoBehaviour
 	{
 		// As soon as the round starts reset the tanks and make sure they can't move.
 		ResetAllTanks();
+		player1_text.text = "Player 1";
+		player2_text.text = "Player 2";
 		DisableTankControl();
 
 		// Snap the camera's zoom and position to something appropriate for the reset tanks.
@@ -107,7 +113,7 @@ public class GameManage : MonoBehaviour
 
 		// Increment the round number and display text showing the players what round it is.
 		m_RoundNumber++;
-		m_MessageText.text = "ROUND " + m_RoundNumber + m_Tanks[0].getHelath();
+		m_MessageText.text = "ROUND " + m_RoundNumber; //+ m_Tanks[0].getHelath();
 
 		// Wait for the specified length of time until yielding control back to the game loop.
 		yield return m_StartWait;
@@ -118,6 +124,7 @@ public class GameManage : MonoBehaviour
 	{
 		// As soon as the round begins playing let the players control the tanks.
 		EnableTankControl();
+		m_MessageText.text = "";
 
 		// Clear the text from the screen.
 
@@ -126,7 +133,7 @@ public class GameManage : MonoBehaviour
 		while (!OneTankLeft())
 		{
 			// ... return on the next frame.
-			m_MessageText.text = m_Tanks[0].getHelath() + " " + m_Tanks[1].getHelath();
+			//m_MessageText.text = m_Tanks[0].getHelath() + " " + m_Tanks[1].getHelath();
 			m_SliderLeft.value = m_Tanks[0].getHelath();
 			m_SliderRight.value = m_Tanks[1].getHelath();
 			yield return null;
@@ -220,6 +227,8 @@ public class GameManage : MonoBehaviour
 		string message = "DRAW!";
 		m_SliderLeft.value = 0;
 		m_SliderRight.value = 0;
+		player1_text.text = "";
+		player2_text.text = "";
 
 		// If there is a winner then change the message to reflect that.
 		if (m_RoundWinner != null)
