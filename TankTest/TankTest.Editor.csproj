@@ -150,6 +150,10 @@
       <Project>{1198B96C-BD09-76D8-D9A8-3668C6D95EC4}</Project>
       <Name>TankTest</Name>
     </ProjectReference>
+    <ProjectReference Include="TankTest.unityproj">
+      <Project>{1198B96C-BD09-76D8-D9A8-3668C6D95EC4}</Project>
+      <Name>TankTest</Name>
+    </ProjectReference>
     <ProjectReference Include="TankTest.Editor.Plugins.csproj">
       <Project>{5054DC34-8174-3FF7-DDC6-38513FF27A97}</Project>
       <Name>TankTest.Editor.Plugins</Name>
@@ -162,14 +166,30 @@
     <Compile Include="Assets\TornadoBanditsStudio\Editor\TBS_PresentationWindow.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Odds_N_Ends Series - Tropical Foliage v1.0\READ ME.txt" />
-    <None Include="Assets\Odds_N_Ends Series - Tropical Foliage v1.0\Shader\CustomFoliage.shader" />
+    <None Include="Assets\Fonts\Jupiter\LICENSE.txt" />
+    <None Include="Assets\Materials\UI-Default-No-Alpha.shader" />
+    <None Include="Assets\Poly City - Free Cartoon Pack\Readme.txt" />
     <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ChromaticAberrationShader.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ConvertDepth.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\CreaseApply.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\SSAOShader.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\VignettingShader.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\DLAA.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAA2.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAA3Console.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAAPreset2.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAAPreset3.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\NFAA.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\SSAA.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\SeparableBlur.shader" />
     <None Include="Assets\Standard Assets\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />
     <None Include="Assets\Standard Assets\Environment\Water\Water\Shaders\FXWaterPro.shader" />
     <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Advanced.shader" />
     <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Simple.shader" />
     <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\WaterInclude.cginc" />
+    <None Include="Assets\Textures and Sprites\SF UI\Background\LICENSE.txt" />
+    <None Include="Assets\read me.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

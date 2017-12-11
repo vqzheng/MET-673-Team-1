@@ -31,7 +31,7 @@ public class TankHealth : MonoBehaviour
         m_CurrentHealth = m_StartingHealth;
         m_Dead = false;
 
-        SetHealthUI();
+        // SetHealthUI();
 		SetColor ();
     }
 
@@ -40,7 +40,7 @@ public class TankHealth : MonoBehaviour
         // Adjust the tank's current health, update the UI based on the new health and check whether or not the tank is dead.
         m_CurrentHealth -= amount;
 
-        SetHealthUI();
+        // SetHealthUI();
 
         if (m_CurrentHealth <= 0f && !m_Dead) {
         	OnDeath();

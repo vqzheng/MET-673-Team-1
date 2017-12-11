@@ -109,10 +109,20 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\ActiveStateToggler.cs" />
+    <Compile Include="Assets\Scripts\ApplicationManager.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraControl.cs" />
+    <Compile Include="Assets\Scripts\ChangeColor.cs" />
+    <Compile Include="Assets\Scripts\DragMe.cs" />
+    <Compile Include="Assets\Scripts\DragPanel.cs" />
+    <Compile Include="Assets\Scripts\DropMe.cs" />
     <Compile Include="Assets\Scripts\Manager\GameManage.cs" />
     <Compile Include="Assets\Scripts\Manager\TankManager.cs" />
+    <Compile Include="Assets\Scripts\PanelManager.cs" />
+    <Compile Include="Assets\Scripts\ResizePanel.cs" />
+    <Compile Include="Assets\Scripts\ScrollDetailTexture.cs" />
     <Compile Include="Assets\Scripts\Shell\ShellExplosion.cs" />
+    <Compile Include="Assets\Scripts\ShowSliderValue.cs" />
     <Compile Include="Assets\Scripts\Tank\ShellExplosion.cs" />
     <Compile Include="Assets\Scripts\Tank\TankHealth.cs" />
     <Compile Include="Assets\Scripts\Tank\TankMovement.cs" />
@@ -121,19 +131,36 @@
     <Compile Include="Assets\Scripts\Testing\TakeHealthTest.cs" />
     <Compile Include="Assets\Scripts\Testing\TankMovementTest.cs" />
     <Compile Include="Assets\Scripts\Testing\TankShootingTest.cs" />
+    <Compile Include="Assets\Scripts\TiltWindow.cs" />
     <Compile Include="Assets\Scripts\UI\UIDirectionControl.cs" />
     <Compile Include="Assets\TornadoBanditsStudio\Low Poly Free Pack\Scripts\TBS_CameraMovement.cs" />
     <Compile Include="Assets\TornadoBanditsStudio\Low Poly Free Pack\Water\TBS_Water.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Odds_N_Ends Series - Tropical Foliage v1.0\READ ME.txt" />
-    <None Include="Assets\Odds_N_Ends Series - Tropical Foliage v1.0\Shader\CustomFoliage.shader" />
+    <None Include="Assets\Fonts\Jupiter\LICENSE.txt" />
+    <None Include="Assets\Materials\UI-Default-No-Alpha.shader" />
+    <None Include="Assets\Poly City - Free Cartoon Pack\Readme.txt" />
     <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ChromaticAberrationShader.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ConvertDepth.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\CreaseApply.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\SSAOShader.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\VignettingShader.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\DLAA.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAA2.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAA3Console.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAAPreset2.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAAPreset3.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\NFAA.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\SSAA.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\SeparableBlur.shader" />
     <None Include="Assets\Standard Assets\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />
     <None Include="Assets\Standard Assets\Environment\Water\Water\Shaders\FXWaterPro.shader" />
     <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Advanced.shader" />
     <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Simple.shader" />
     <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\WaterInclude.cginc" />
+    <None Include="Assets\Textures and Sprites\SF UI\Background\LICENSE.txt" />
+    <None Include="Assets\read me.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
