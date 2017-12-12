@@ -68,6 +68,7 @@ public class TankHealth : MonoBehaviour
     {
         // Play the effects for the death of the tank and deactivate it.
         m_Dead = true;
+		print("ondeath");
 
         m_ExplosionParticles.transform.position = transform.position;
         m_ExplosionParticles.gameObject.SetActive(true);

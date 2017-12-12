@@ -60,7 +60,6 @@ public class CameraControl : MonoBehaviour
 
 		// If there are targets divide the sum of the positions by the number of them to find the average.
 		if (numTargets > 0)
-			print (numTargets);
 			averagePos /= numTargets;
 
 		// Keep the same y value.

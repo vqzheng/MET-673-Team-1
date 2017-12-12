@@ -32,12 +32,14 @@ public class ShellExplosion : MonoBehaviour
             // If they don't have a rigidbody, go on to the next collider.
             if (!targetRigidbody)
                 continue;
+			
 
             // Add an explosion force.
             targetRigidbody.AddExplosionForce (m_ExplosionForce, transform.position, m_ExplosionRadius);
 
             // Find the TankHealth script associated with the rigidbody.
             TankHealth targetHealth = targetRigidbody.GetComponent<TankHealth> ();
+			ShellExplosion shellExplosion = targetRigidbody.GetComponent<ShellExplosion> ();
 			m_ExplosionParticles.transform.parent = null;
 
 
@@ -59,7 +61,11 @@ public class ShellExplosion : MonoBehaviour
 
 				// Deal this damage to the tank.
 				targetHealth.TakeDamage (damage);
+				if (shellExplosion) {
+					shellExplosion.OnTriggerEnter (null);
+				}
 			}
+
         }
 
         // Unparent the particles from the shell.
