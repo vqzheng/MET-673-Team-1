@@ -142,8 +142,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 278.75, y: -314.09586}
-  m_SizeDelta: {x: 317.7, y: 24.208336}
+  m_AnchoredPosition: {x: 286.25, y: -323.23334}
+  m_SizeDelta: {x: 317.7, y: 26.333338}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &41138527
 MonoBehaviour:
@@ -1090,7 +1090,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: MAP3
+  m_Text: LEAGUE
 --- !u!222 &960584094
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1131,8 +1131,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 278.75, y: -185.67918}
-  m_SizeDelta: {x: 317.7, y: 24.208336}
+  m_AnchoredPosition: {x: 286.25, y: -190.56668}
+  m_SizeDelta: {x: 317.7, y: 26.333338}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1010582425
 MonoBehaviour:
@@ -1174,7 +1174,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 528188000}
-        m_MethodName: LoadBeachScene
+        m_MethodName: LoadCityScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1359,7 +1359,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1164510698}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 528188000}
+        m_MethodName: QuitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1164510698
@@ -1771,8 +1782,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 278.75, y: -59.683334}
-  m_SizeDelta: {x: 317.7, y: 19.366669}
+  m_AnchoredPosition: {x: 286.25, y: -60.533333}
+  m_SizeDelta: {x: 317.7, y: 21.06667}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1434330695
 MonoBehaviour:
@@ -1847,8 +1858,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 278.75, y: -249.88753}
-  m_SizeDelta: {x: 317.7, y: 24.208336}
+  m_AnchoredPosition: {x: 286.25, y: -256.90002}
+  m_SizeDelta: {x: 317.7, y: 26.333338}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1573265584
 MonoBehaviour:
@@ -1888,7 +1899,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1573265585}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 528188000}
+        m_MethodName: LoadLeague
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1573265585
@@ -2126,8 +2148,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 278.75, y: -121.47084}
-  m_SizeDelta: {x: 317.7, y: 24.208336}
+  m_AnchoredPosition: {x: 286.25, y: -124.23334}
+  m_SizeDelta: {x: 317.7, y: 26.333338}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1672333846
 MonoBehaviour:
@@ -2375,7 +2397,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: ISLAND
+  m_Text: CITY
 --- !u!222 &2033968538
 CanvasRenderer:
   m_ObjectHideFlags: 0
