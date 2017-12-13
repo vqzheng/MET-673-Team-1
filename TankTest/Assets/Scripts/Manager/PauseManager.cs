@@ -27,8 +27,16 @@ public class PauseManager : MonoBehaviour {
 		}
 	}
 
-	public void LoadGame () {
+	public void LoadDesert () {
 		SceneManager.LoadScene(1);
+	}
+
+	public void LoadLeague () {
+		SceneManager.LoadScene(3);
+	}
+
+	public void LoadCity () {
+		SceneManager.LoadScene(2);
 	}
 
 	public void QuitGame () {

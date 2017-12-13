@@ -232,7 +232,7 @@ public class GameManage : MonoBehaviour
 
 		// If there is a winner then change the message to reflect that.
 		if (m_RoundWinner != null)
-			message = m_RoundWinner.m_ColoredPlayerText + " WINS THE ROUND!" + m_Tanks[0].getHelath();
+			message = m_RoundWinner.m_ColoredPlayerText + " WINS THE ROUND!";
 
 		// Add some line breaks after the initial message.
 		message += "\n\n\n\n";
