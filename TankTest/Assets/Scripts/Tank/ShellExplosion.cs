@@ -39,7 +39,7 @@ public class ShellExplosion : MonoBehaviour
 
             // Find the TankHealth script associated with the rigidbody.
             TankHealth targetHealth = targetRigidbody.GetComponent<TankHealth> ();
-			ShellExplosion shellExplosion = targetRigidbody.GetComponent<ShellExplosion> ();
+			PlaneExplosion planeExplosion = targetRigidbody.GetComponent<PlaneExplosion> ();
 			m_ExplosionParticles.transform.parent = null;
 
 
@@ -61,8 +61,8 @@ public class ShellExplosion : MonoBehaviour
 
 				// Deal this damage to the tank.
 				targetHealth.TakeDamage (damage);
-				if (shellExplosion) {
-					shellExplosion.OnTriggerEnter (null);
+				if (planeExplosion) {
+					planeExplosion.OnTriggerEnter (null);
 				}
 			}
 
