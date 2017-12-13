@@ -209,7 +209,7 @@ MonoBehaviour:
   m_ExplosionAudio: {fileID: 0}
   m_MaxDamage: 100
   m_ExplosionForce: 1000
-  m_MaxLifeTime: 0.4
+  m_MaxLifeTime: 2
   m_ExplosionRadius: 6
 --- !u!136 &136200725412511912
 CapsuleCollider:
