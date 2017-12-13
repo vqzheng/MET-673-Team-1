@@ -540,7 +540,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: HELP
+  m_Text: ABOUT
 --- !u!222 &346601465
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1711,8 +1711,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 286.25, y: -302}
-  m_SizeDelta: {x: 432.5, y: 68.80001}
+  m_AnchoredPosition: {x: 219, y: -302}
+  m_SizeDelta: {x: 298, y: 68.80001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1228376850
 MonoBehaviour:
@@ -2633,8 +2633,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 286.25, y: -187.20001}
-  m_SizeDelta: {x: 432.5, y: 240.8}
+  m_AnchoredPosition: {x: 219, y: -187.20001}
+  m_SizeDelta: {x: 298, y: 240.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2039318495
 MonoBehaviour:
@@ -2668,7 +2668,19 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest
+  m_Text: 'CS673 Team 1
+
+    Linlan Chen
+
+    Shuhan Liu
+
+    Haotian Wu
+
+    Baoxiang Yang
+
+    Lei Yang
+
+    Qiwei Zheng'
 --- !u!222 &2039318496
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2707,8 +2719,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 286.25, y: -78.4}
-  m_SizeDelta: {x: 432.5, y: 56.800007}
+  m_AnchoredPosition: {x: 219, y: -78.4}
+  m_SizeDelta: {x: 298, y: 56.800007}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2136246107
 MonoBehaviour:
@@ -2742,7 +2754,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: HELP
+  m_Text: ABOUT
 --- !u!222 &2136246108
 CanvasRenderer:
   m_ObjectHideFlags: 0
